@@ -4,6 +4,7 @@ import imagebgastro from '../assets/imageastro_auto_x2-transformed.jpg';
 import "./codecosmos.css";
 import { db } from '../FIrebaseDb/FirebaseConfig';
 import { collection, doc, setDoc } from 'firebase/firestore';
+import codecheflogo from '../assets/pccoecodecheflogo.png';
 
 const CodeCosmos = () => {
   // console.log(db);
@@ -55,7 +56,7 @@ const CodeCosmos = () => {
         }
         addData();
         console.log(data);
-        alert('Form Submitted Successfully');
+        alert('Form Submitted Successfully! click on button to join whatsapp group');
         setFinal(true);
     }
 
@@ -91,14 +92,23 @@ const CodeCosmos = () => {
               src={imagebgastro}
               alt=""
             />
-            <div className="text-white">
+            <img src={codecheflogo} className='absolute h-32 w-32  z-1 top-1 left-4'/>
+            <img src={'https://cdn.codechef.com/images/cc-logo.svg'} className='h-40 w-40 absolute z-1 -top-4 right-4'/>
+
+            <div className="text-black">
               <div className="flex flex-col items-center justify-center">
                 <h1 className="text-5xl text-emerald-700-800 font-bold">Code Cosmos</h1>
-                <h2 className="text-2xl text-emerald-700-800 font-bold text-center mt-4">
+                <h2 className="text-2xl text-emerald-700-800 font-semibold text-center mt-4">
                   You are Successfully registered
                 </h2>
+                <br/>
+                <h2 className='text-xl text-center text-balck font-medium'>Join WhatsApp Group By clicking Below Button</h2>
+                <a href='https://chat.whatsapp.com/LhG8oY2ynTsC8E1jmqVOC9' target="_blank" rel="noreferrer" className='font-semibold text-2xl left-4 bg-white/90 rounded-lg p-2 text-black w-64 text-center shadow-md shadow-black mt-4'>WhatsApp</a>
               </div>
             </div>
+            <a href="https://www.codechef.com/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-16 font-semibold text-lg left-4 text-neutral-200'>ChodeChef PCCOE Handles</a>
+            <a href="https://www.instagram.com/codechefpccoe/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md left-4 bg-pink-700/70 rounded-lg p-2 text-white shadow-md shadow-black '>CodeChef-Instagram</a>
+            <a href="https://www.linkedin.com/company/codechef-pccoe-chapter/mycompany/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md right-4 bg-blue-700/70 rounded-lg p-2 text-white shadow-md shadow-black'>CodeChef-Linkedin</a>
           </div>
         )
     }
@@ -107,19 +117,28 @@ const CodeCosmos = () => {
         return(
         <div className='h-screen w-screen flex items-center justify-center overflow-hidden'>
             <img className="absolute -z-10 bg-gradient-to-r from-purple-900 to-purple-800 object-cover object-center  h-screen w-screen" src={imagebgastro} alt="" />
+            <img src={codecheflogo} className='h-32 w-32 absolute z-1 top-2 left-4'/>
+            <img src={'https://cdn.codechef.com/images/cc-logo.svg'} className='h-40 w-40 absolute z-1 -top-4 right-4'/>
+
             <div >
                 <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-5xl text-neutral-900 font-bold">CODE COSMOS</h1>
+                    <h1 className="text-5xl text-neutral-900 font-bold text-center">CODE COSMOS</h1>
                     <h2 className="text-2xl text-neutral-800 font-bold text-center mt-4">The Interstellar Adventure Awaits You!</h2>
                     <button className='bg-white p-6 rounded-3xl text-black font-bold text-lg mt-4 shadow-xl shadow-black  hover:bg-fuchsia-800 hover:text-white' onClick={()=>setShow(true)}>Click Here For Registrtion</button>
                 </div>
             </div>
+            <a href="https://www.codechef.com/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-16 font-semibold text-lg left-4 text-neutral-200'>ChodeChef PCCOE Handles</a>
+            <a href="https://www.instagram.com/codechefpccoe/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md left-4 bg-pink-700/70 rounded-lg p-2 text-white shadow-md shadow-black '>CodeChef-Instagram</a>
+            <a href="https://www.linkedin.com/company/codechef-pccoe-chapter/mycompany/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md right-4 bg-blue-700/70 rounded-lg p-2 text-white shadow-md shadow-black'>CodeChef-Linkedin</a>
         </div> 
         )
     }    
   return (
     <div className='h-screen w-screen flex items-center justify-center overflow-hidden'>
-            <img className=" absolute -z-10 bg-gradient-to-r from-purple-900 to-purple-800 object-cover object-center h-screen w-screen" src={imagebgastro} alt="" />
+    <img src={codecheflogo} className='absolute h-32 w-32  z-1 top-1 left-4'/>
+    <img src={'https://cdn.codechef.com/images/cc-logo.svg'} className='h-40 w-40 absolute z-1 -top-4 right-4'/>
+
+      <img className=" absolute -z-10 bg-gradient-to-r from-purple-900 to-purple-800 object-cover object-center h-screen w-screen" src={imagebgastro} alt="" />
         <div className="box">
           <span className="borderLine"></span>
           {first && <form>
@@ -181,7 +200,7 @@ const CodeCosmos = () => {
           </form>
           }
         </div>
-    </div>
+      </div>
   );
 };
 
