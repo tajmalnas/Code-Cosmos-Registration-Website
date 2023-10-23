@@ -109,8 +109,8 @@ const CodeCosmos = () => {
             <img className="absolute -z-10 bg-gradient-to-r from-purple-900 to-purple-800 object-cover object-center  h-screen w-screen" src={imagebgastro} alt="" />
             <div >
                 <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-5xl text-emerald-700-800 font-bold">Code Cosmos</h1>
-                    <h2 className="text-2xl text-emerald-700-800 font-bold text-center mt-4">It is 3 Hours Long Coding Challenge </h2>
+                    <h1 className="text-5xl text-neutral-900 font-bold">CODE COSMOS</h1>
+                    <h2 className="text-2xl text-neutral-800 font-bold text-center mt-4">The Interstellar Adventure Awaits You!</h2>
                     <button className='bg-white p-6 rounded-3xl text-black font-bold text-lg mt-4 shadow-xl shadow-black  hover:bg-fuchsia-800 hover:text-white' onClick={()=>setShow(true)}>Click Here For Registrtion</button>
                 </div>
             </div>
