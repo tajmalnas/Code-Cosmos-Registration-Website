@@ -108,7 +108,7 @@ const CodeCosmos = () => {
             </div>
             <a href="https://www.codechef.com/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-16 font-semibold text-lg left-4 text-neutral-200'>ChodeChef PCCOE Handles</a>
             <a href="https://www.instagram.com/codechefpccoe/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md left-4 bg-pink-700/70 rounded-lg p-2 text-white shadow-md shadow-black '>CodeChef-Instagram</a>
-            <a href="https://www.linkedin.com/company/codechef-pccoe-chapter/mycompany/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md right-4 bg-blue-700/70 rounded-lg p-2 text-white shadow-md shadow-black'>CodeChef-Linkedin</a>
+            <a href="https://www.linkedin.com/company/codechef-pccoe-chapter/mycompany/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md right-4  bg-blue-700/70 rounded-lg p-2 text-white shadow-md shadow-black md:left-64 w-max'>CodeChef-Linkedin</a>
           </div>
         )
     }
@@ -129,7 +129,7 @@ const CodeCosmos = () => {
             </div>
             <a href="https://www.codechef.com/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-16 font-semibold text-lg left-4 text-neutral-200'>ChodeChef PCCOE Handles</a>
             <a href="https://www.instagram.com/codechefpccoe/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md left-4 bg-pink-700/70 rounded-lg p-2 text-white shadow-md shadow-black '>CodeChef-Instagram</a>
-            <a href="https://www.linkedin.com/company/codechef-pccoe-chapter/mycompany/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md right-4 bg-blue-700/70 rounded-lg p-2 text-white shadow-md shadow-black'>CodeChef-Linkedin</a>
+            <a href="https://www.linkedin.com/company/codechef-pccoe-chapter/mycompany/" target="_blank" rel="noreferrer" className='absolute z-1 bottom-4 font-semibold text-md right-4 bg-blue-700/70 rounded-lg p-2 text-white shadow-md shadow-black md:left-64 w-max'>CodeChef-Linkedin</a>
         </div> 
         )
     }    
