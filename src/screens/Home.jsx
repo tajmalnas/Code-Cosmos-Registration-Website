@@ -6,7 +6,7 @@ import { db } from '../FIrebaseDb/FirebaseConfig';
 import { collection, doc, setDoc } from 'firebase/firestore';
 
 const CodeCosmos = () => {
-  console.log(db);
+  // console.log(db);
     const [show, setShow] = useState(false);
     const [first, setFirst] = useState(true);
     const [final, setFinal] = useState(false);
@@ -85,22 +85,28 @@ const CodeCosmos = () => {
 
     if(final){
         return(
-            <div className='h-screen w-screen flex items-center justify-center overflow-hidden'>
-                <img className="absolute -z-10 bg-gradient-to-r from-gray-900 to-gray-800  h-screen w-screen" src={imagebgastro} alt="" />
-                <div >
-                    <div className="flex flex-col items-center justify-center">
-                        <h1 className="text-5xl text-emerald-700-800 font-bold">Code Cosmos</h1>
-                        <h2 className="text-2xl text-emerald-700-800 font-bold text-center mt-4">You are Succesfully registered</h2>
-                    </div>
-                </div>
-            </div> 
-            )
+          <div className='h-screen w-screen flex items-center justify-center overflow-hidden'>
+            <img
+              className="absolute -z-10 h-full w-full object-cover object-center"
+              src={imagebgastro}
+              alt=""
+            />
+            <div className="text-white">
+              <div className="flex flex-col items-center justify-center">
+                <h1 className="text-5xl text-emerald-700-800 font-bold">Code Cosmos</h1>
+                <h2 className="text-2xl text-emerald-700-800 font-bold text-center mt-4">
+                  You are Successfully registered
+                </h2>
+              </div>
+            </div>
+          </div>
+        )
     }
 
     if(!show){
         return(
         <div className='h-screen w-screen flex items-center justify-center overflow-hidden'>
-            <img className="absolute -z-10 bg-gradient-to-r from-gray-900 to-gray-800  h-screen w-screen" src={imagebgastro} alt="" />
+            <img className="absolute -z-10 bg-gradient-to-r from-purple-900 to-purple-800 object-cover object-center  h-screen w-screen" src={imagebgastro} alt="" />
             <div >
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-5xl text-emerald-700-800 font-bold">Code Cosmos</h1>
@@ -113,7 +119,7 @@ const CodeCosmos = () => {
     }    
   return (
     <div className='h-screen w-screen flex items-center justify-center overflow-hidden'>
-            <img className=" absolute -z-10 bg-gradient-to-r from-gray-900 to-gray-800  h-screen w-screen" src={imagebgastro} alt="" />
+            <img className=" absolute -z-10 bg-gradient-to-r from-purple-900 to-purple-800 object-cover object-center h-screen w-screen" src={imagebgastro} alt="" />
         <div className="box">
           <span className="borderLine"></span>
           {first && <form>
