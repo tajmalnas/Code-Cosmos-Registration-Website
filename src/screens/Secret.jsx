@@ -1,10 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { db } from "../FIrebaseDb/FirebaseConfig";
-import { doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, getFirestore } from "firebase/firestore";
+import * as XLSX from "xlsx";
 
 const Secret = () => {
   const [email, setEmail] = useState('');
   const [userData, setUserData] = useState(null);
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const firestore = getFirestore();
+      const collectionRef = collection(firestore, "codecosmos"); 
+
+      const querySnapshot = await getDocs(collectionRef);
+
+      const dataArray = [];
+      querySnapshot.forEach((doc) => {
+        dataArray.push(doc.data());
+      });
+
+      setData(dataArray);
+    };
+
+    fetchData();
+  }, []);
+
+  const exportToExcel = () => {
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    XLSX.writeFile(wb, "data.xlsx");
+  };
+
 
   const checkForData = async () => {
     if (email === '') {
@@ -47,7 +76,12 @@ const Secret = () => {
           <p>Email:{userData.email}</p>
         </div>
       )}
+      <div>
+      {/* Your component JSX */}
+      <button onClick={exportToExcel}>Export to Excel</button>
     </div>
+    </div>
+
   );
 };
 
